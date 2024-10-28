@@ -1,9 +1,0 @@
-{
-  "name": "vatacloud-demo-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/vatacloud-demo-e2e/src",
-  "implicitDependencies": ["vatacloud-demo"],
-  "// targets": "to see all targets run: nx show project vatacloud-demo-e2e --web",
-  "targets": {}
-}

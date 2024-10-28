@@ -7,6 +7,6 @@ describe('App', () => {
   it('renders properly', async () => {
     const wrapper = mount(App, {});
 
-    expect(wrapper.text()).toContain('Welcome vatacloud-demo 👋');
+    expect(wrapper.text()).toContain('Welcome host-webapp 👋');
   });
 });

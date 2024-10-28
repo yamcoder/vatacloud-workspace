@@ -2,10 +2,18 @@
   "name": "@vatacloud-workspace/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
-  "private": true,
+  "scripts": {
+    "start:host-webapp": "nx serve host-webapp",
+    "start:tokyo-time-webapp": "nx serve tokyo-time-webapp",
+    "start:moscow-time-webapp": "nx serve moscow-time-webapp",
+    "build:all": "nx run-many --target=build --projects=host-webapp,tokyo-time-webapp,moscow-time-webapp",
+    "dev": "nx run-many --target=serve-static --projects=host-webapp,tokyo-time-webapp,moscow-time-webapp"
+  },
+  "private": false,
   "dependencies": {
-    "vue": "^3.3.4"
+    "dayjs": "^1.11.10",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -18,6 +26,7 @@
     "@nx/vue": "20.0.6",
     "@nx/web": "20.0.6",
     "@nx/workspace": "20.0.6",
+    "@originjs/vite-plugin-federation": "^1.3.5",
     "@playwright/test": "^1.36.0",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
@@ -39,7 +48,8 @@
     "tslib": "^2.3.0",
     "typescript": "~5.5.2",
     "typescript-eslint": "^8.0.0",
-    "vite": "^5.0.0",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "~3.8.1",
     "vitest": "^1.3.1",
     "vue-tsc": "^2.0.0"
   }
